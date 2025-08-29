@@ -1,0 +1,286 @@
+html, 
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Source Sans Pro', sans-serif;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+.container {
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 1.25em;
+}
+
+header {
+    padding: 0.85em 0;
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo-text {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 700;
+    font-size: 0.84rem;
+    color: #0E0E0E;
+}
+
+.logo-img {
+    width: 1.43em;
+    margin-right: 0.187em;
+}
+
+.icon {
+    width: 1.2rem;
+}
+
+ul {
+    display: flex;
+    align-items: center;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+nav a {
+    display: block;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: #090909;
+    padding: 0.85em 0;
+    margin-left: 0.65em;
+}
+
+.article-main {
+    margin-bottom: 3.187em;
+}
+
+.article-main .container {
+    padding-top: 2em;
+    color: #151515;
+}
+
+.main-date {
+    font-weight: 400;
+    font-size: 0.75rem;
+    margin: 0 0 1.33em;
+}
+
+.main-heading {
+    font-weight: 700;
+    font-size: 2rem;
+    line-height: 1.08;
+    letter-spacing: -0.3px;
+    margin: 0 0 0.46em;
+}
+
+.main-text {
+    font-weight: 400;
+    font-size: 1rem;
+    margin: 0 0 2.18em;
+}
+
+img {
+    width: 100%;
+    object-fit: cover;
+}
+
+.main-img {
+    height: 191px;
+    border-radius: 3px;
+    margin: 0 0 2.18em;
+    object-position: 0 72%;
+}
+
+.sub-heading,
+.article-text {
+    font-size: 1rem;
+    margin: 0 0 1.37em;
+}
+
+.sub-heading {
+    font-weight: 700;
+}
+
+.article-text {
+    font-weight: 400;
+}
+
+.recent-posts {
+    margin-bottom: 3.5em;
+}
+
+.recent-posts-heading {
+    text-align: center;
+    font-weight: 700;
+    font-size: 1rem;
+    color: #000000;
+    margin: 0 0 1.687em;
+}
+
+article {
+    margin-bottom: 2.562em;
+    display: flex;
+    flex-direction: column;
+}
+
+.article-img {
+    height: 232px;
+    border-radius: 3px;
+    margin-bottom: 0.875em;
+}
+
+.article-date {
+    font-size: 0.885rem;
+    font-weight: 400;
+    color: #000000;
+    margin: 0 0 0.63em;
+}
+
+.article-heading {
+    font-size: 1.5rem;
+    line-height: 1.08;
+    font-weight: 700;
+    color: #141414;
+    margin: 0 0 0.375em;
+}
+
+.article-preview {
+    font-size: 1rem;
+    line-height: 1.25;
+    font-weight: 400;
+    color: #505050;
+    margin: 0;
+}
+
+footer {
+    text-align: center;
+    padding: 2.31em 0;
+    background-color: #202020;
+    font-size: 0.75rem;
+    /* margin-top: 2.68em; */
+}
+
+footer p {
+    margin: 0;
+}
+
+.top-text {
+    font-weight: 700;
+    line-height: 1.08;
+    color: #ECECEC;
+    margin-bottom: 0.187em;
+}
+
+.bottom-text {
+    font-weight: 400;
+    line-height: 1.25;
+    color: #D7D7D7;
+}
+
+
+@media (min-width: 768px) {
+    header {
+        padding: 1.5em 0;
+    }
+
+    main {
+        background-color: #FAFAFA;
+    }
+
+    .container {
+        padding: 0 3.312em;
+    }
+
+    .logo-img {
+        width: 2.14em;
+    }
+
+    .logo-text {
+        font-size: 1.25rem;
+    }
+
+    nav a {
+        font-size: 1rem;
+        margin-left: 1.6em;
+    }
+
+    .article-main .container {
+        padding-top: 4.43em;
+    }
+
+    .main-post {
+        padding: 0 4.25em;
+    }
+
+    .main-date {
+        font-size: 1rem;
+        margin: 0 0 1.5em;
+    }
+
+    .main-heading {
+        font-size: 2.25rem;
+        margin: 0 0 0.75em;
+    }
+
+    .main-text {
+        margin: 0 0 2.25em;
+    }
+
+    .main-img {
+        height: 488px;
+        margin: 0 0 2.25em;
+    }
+
+    .sub-heading {
+        font-size: 1.5rem;
+    }
+
+    .article-text {
+        font-size: 1.14rem;
+    }
+
+    .recent-posts {
+        padding-bottom: 3.187em;
+        margin-bottom: 0;
+    }
+
+    .recent-posts-heading {
+        font-size: 1.5rem;
+        color: #141414;
+        margin: 0 0 1.16em;
+    }
+
+    .articles-row {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 0 1.625em;
+    }
+
+    article {
+        margin-bottom: 0;
+    }
+
+    .article-date {
+        font-size: 0.875rem;
+    }
+
+    footer {
+        margin-top: 0;
+    }
+}
+
