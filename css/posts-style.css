@@ -3,75 +3,20 @@ body {
     margin: 0;
     padding: 0;
     font-family: 'Source Sans Pro', sans-serif;
+    transition: background-color 0.6s;
 }
 
 * {
     box-sizing: border-box;
 }
 
-.container {
-    width: 100%;
-    margin: 0 auto;
-    padding: 0 1.25em;
-}
-
-header {
-    padding: 0.85em 0;
-}
-
-header .container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.logo {
-    display: flex;
-    align-items: center;
-}
+/* ----- TYPOGRAPHY ----- */
 
 .logo-text {
     font-family: 'Roboto', sans-serif;
     font-weight: 700;
     font-size: 0.84rem;
     color: #0E0E0E;
-}
-
-.logo-img {
-    width: 1.43em;
-    margin-right: 0.187em;
-}
-
-.icon {
-    width: 1.2rem;
-}
-
-ul {
-    display: flex;
-    align-items: center;
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
-}
-
-nav a {
-    display: block;
-    text-decoration: none;
-    text-transform: uppercase;
-    font-size: 0.75rem;
-    font-weight: 600;
-    color: #090909;
-    padding: 0.85em 0;
-    margin-left: 0.65em;
-}
-
-.article-main {
-    margin-bottom: 3.187em;
-}
-
-.article-main .container {
-    padding-top: 2em;
-    color: #151515;
 }
 
 .main-date {
@@ -94,18 +39,6 @@ nav a {
     margin: 0 0 2.18em;
 }
 
-img {
-    width: 100%;
-    object-fit: cover;
-}
-
-.main-img {
-    height: 191px;
-    border-radius: 3px;
-    margin: 0 0 2.18em;
-    object-position: 0 72%;
-}
-
 .sub-heading,
 .article-text {
     font-size: 1rem;
@@ -120,28 +53,12 @@ img {
     font-weight: 400;
 }
 
-.recent-posts {
-    margin-bottom: 3.5em;
-}
-
 .recent-posts-heading {
     text-align: center;
     font-weight: 700;
     font-size: 1rem;
     color: #000000;
     margin: 0 0 1.687em;
-}
-
-article {
-    margin-bottom: 2.562em;
-    display: flex;
-    flex-direction: column;
-}
-
-.article-img {
-    height: 232px;
-    border-radius: 3px;
-    margin-bottom: 0.875em;
 }
 
 .article-date {
@@ -167,14 +84,6 @@ article {
     margin: 0;
 }
 
-footer {
-    text-align: center;
-    padding: 2.31em 0;
-    background-color: #202020;
-    font-size: 0.75rem;
-    /* margin-top: 2.68em; */
-}
-
 footer p {
     margin: 0;
 }
@@ -192,6 +101,124 @@ footer p {
     color: #D7D7D7;
 }
 
+/* ----- LINKS ----- */
+
+nav a {
+    display: block;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: #090909;
+    padding: 1em 0;
+    margin-left: 0.65em;
+}
+
+/* ----- LAYOUT ----- */
+
+.container {
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 1.25em;
+}
+
+header {
+    padding: 0.85em 0;
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo-img {
+    width: 1.43em;
+    margin-right: 0.187em;
+}
+
+.article-main {
+    margin-bottom: 3.187em;
+}
+
+.article-main .container {
+    padding-top: 2em;
+    color: #151515;
+}
+
+img {
+    width: 100%;
+    display: block;
+    object-fit: cover;
+}
+
+.main-img {
+    height: 191px;
+    border-radius: 3px;
+    margin: 0 0 2.18em;
+    object-position: 0 72%;
+}
+
+.recent-posts {
+    margin-bottom: 3.5em;
+}
+
+article {
+    margin-bottom: 2.562em;
+    display: flex;
+    flex-direction: column;
+}
+
+.article-img {
+    height: 232px;
+    border-radius: 3px;
+    margin-bottom: 0.875em;
+}
+
+footer {
+    text-align: center;
+    padding: 2.31em 0;
+    background-color: #202020;
+    font-size: 0.75rem;
+}
+
+/* ----- NAVIGATION ----- */
+
+.menu {
+    display: flex;
+    align-items: start;
+    justify-content: end;
+    height: 100%;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    right: -150px;  
+    transition: 0.6s;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0 15px;
+    margin: 80px 0 0;
+}
+
+.icon {
+    width: 1.2rem;
+}
+
+.close-btn {
+    display: none;
+    padding: 0.625em;
+    font-size: 1.5rem;
+    color: #111;
+}
+
+/* ----- MEDIA QUERIES ----- */
 
 @media (min-width: 768px) {
     header {
@@ -204,6 +231,10 @@ footer p {
 
     .container {
         padding: 0 3.312em;
+    }
+
+    .article-main .container {
+        padding-top: 4.43em;
     }
 
     .logo-img {
@@ -219,8 +250,25 @@ footer p {
         margin-left: 1.6em;
     }
 
-    .article-main .container {
-        padding-top: 4.43em;
+    .icon {
+        visibility: hidden;
+    }
+
+    .close-btn {
+        visibility: hidden;
+    }
+
+    .menu {
+        position: static;
+    }
+
+    ul {
+        display: flex;
+        align-items: center;
+        height: initial;
+        background-color: white;
+        padding: 0;
+        margin: 0;
     }
 
     .main-post {

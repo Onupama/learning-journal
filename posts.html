@@ -5,7 +5,7 @@
     <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,900&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/posts-style.css">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 <body>
     <header>
@@ -14,12 +14,14 @@
                 <img class="logo-img" src="images/logo.png">
                 <p class="logo-text">My learning journal</p>
             </div>
-            <nav>
-                <ul id="menu">
+            <img src="images/hamburger.png" class="icon" id="icon">
+            <nav id="menu" class="menu">
+                <ul>
                     <li><a href="index.html">Home</a></li>
                     <li><a href="posts.html">Posts</a></li>
                     <li><a href="about.html">About Me</a></li>
                 </ul>
+                <span class="close-btn" id="close-btn">&times;</span>
             </nav>
         </div>
     </header>
@@ -92,5 +94,6 @@
         <p class="top-text">My Learning Journal</p>
         <p class="bottom-text">Copyright &copy;2022</p>
     </footer>
+    <script src="script.js"></script>
 </body>
 </html>
